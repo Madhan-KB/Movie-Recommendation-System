@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>🎬 Movie Recommendation System</h1>
+            <p class="subtitle">Discover movies similar to your favorites using AI</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="movieInput" 
+                    class="search-input" 
+                    placeholder="Enter a movie name (e.g., Avatar, Inception)"
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">
+                    Get Recommendations
+                </button>
+            </div>
+            <div id="searchSuggestions" class="suggestions"></div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Finding recommendations...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error hidden"></div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <h2 class="results-title">
+                Recommended Movies for <span id="searchedMovie"></span>
+            </h2>
+            <div id="recommendationsList" class="recommendations-grid"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Powered by Machine Learning & TF-IDF Vectorization</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
